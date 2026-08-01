@@ -18,7 +18,7 @@ spec:
         kubernetes.io/hostname: workernode1
       containers:
         - name: backend
-          image: hariomharish/java-fintech-backend:v1
+          image: hariomharish/hrrsh471/java-fintech-backend:v1
     
             - containerPort: 8080
           env:
