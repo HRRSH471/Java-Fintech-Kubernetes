@@ -19,6 +19,5 @@ spec:
       containers:
         - name: frontend
           image: hariomharish/java-fintech-frontend:v1
-    
+          Ports:
             - containerPort: 80
-          
