@@ -19,8 +19,8 @@ spec:
       containers:
         - name: backend
           image: hariomharish/java-fintech-backend:v1
-    
-            - containerPort: 8080
+          ports:
+           - containerPort: 8080
           env:
             - name: DB_URL
               value: jdbc:postgresql://postgres-service.banking.svc.cluster.local:5432/bankingdb
