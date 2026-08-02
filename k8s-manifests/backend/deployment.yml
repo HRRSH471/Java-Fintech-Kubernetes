@@ -41,6 +41,13 @@ spec:
               value: "8640000"
             - name: CORS_ALLOWED_ORIGIN
               value: "http://52.78.14.247:30081"
+          resources:
+            requests: 
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "250m"    
           readinessProbe:
             httpGet:
               path: /actuator/health
