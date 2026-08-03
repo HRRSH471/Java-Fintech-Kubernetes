@@ -54,3 +54,23 @@ alertmanager:
           resources:
             requests:
               storage: 2Gi
+additionalPrometheusRulesMap:
+  custom-crashloop-rule:
+    groups:
+      - name: custom-kubernetes-apps
+        rules:
+          - alert: kubePoCrashLoopingFast
+            expr: max_overtime(kube_pod_container_status_waiting_reason{reason="CrashLoopBackOff"}[5m]) > 1
+            for: 30s
+            labels:
+              severity: critical
+            annotations:
+              description: "Pod {{ $labels.namespace }}/{{ $labels.pod }} is in CrashLoopingBackOff."
+
+          - alert: kubePodOOMKilled
+            expr: max_overtime(kube_pod_container_status_last_terminated_reason{reason="OOMKilled"}[5m]) == 1
+            for: 10s
+            labels:
+              severity: critical
+            annotations:
+              description: "Pod {{ $labels.namespace }}/{{ $labels.pod }} is in OOMKilled."    
