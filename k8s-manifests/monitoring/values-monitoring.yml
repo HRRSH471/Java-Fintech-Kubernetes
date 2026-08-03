@@ -20,7 +20,7 @@ prometheus:
         cpu: 500m
 
 grafana:
-  nodeselector:
+  nodeSelector:
     role: monitoring
   persistence:
     enabled: true
