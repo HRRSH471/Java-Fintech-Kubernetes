@@ -26,6 +26,7 @@ grafana:
     enabled: true
     storageClassName: local-path
     accessModes:
+      - ReadWriteOnce
     size: 5Gi
   adminPassword: "StrongPassword123!"
   service:
