@@ -31,6 +31,7 @@ grafana:
   service:
     type: NodePort
     nodePort: 30090
+    
 alertmanager:
   alertmanagerSpec:
     nodeSelector:
