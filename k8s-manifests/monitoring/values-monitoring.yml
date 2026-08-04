@@ -68,7 +68,8 @@ alertmanager:
       receiver: 'discord-notifications'
       group_by: ['alertname']
       group_wait: 30s
-      group_interval: 4h
+      group_interval: 5h
+      repeat_interval: 4h
       route:
        - receiver: 'null'
          matchers:
