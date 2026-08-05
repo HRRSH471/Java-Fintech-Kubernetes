@@ -34,6 +34,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: backend-svc
+                name: backend-service
                 port:
                   number: 8080              
