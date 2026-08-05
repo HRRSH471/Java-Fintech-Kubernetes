@@ -40,7 +40,7 @@ spec:
             - name: JWT_EXPIRATION_MS
               value: "8640000"
             - name: CORS_ALLOWED_ORIGIN
-              value: "http://52.78.14.247:30081"
+              value: "http://bank.itisdevops.in"
           resources:
             requests: 
               memory: "128Mi"
